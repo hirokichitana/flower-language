@@ -2,5 +2,6 @@ class Flower < ApplicationRecord
   belongs_to :taist
   belongs_to :user
 
-  validates :name, presence: true
+  validates :flower_name, presence: true
+  validates :explanation, presence: true
 end
