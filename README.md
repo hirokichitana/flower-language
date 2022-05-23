@@ -32,11 +32,12 @@
 
 ## flowers テーブル
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| name    | string     | null: false                    |
-| type_id | references | null: false, foreign_key: true |
-| user_id | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| flower_name | string     | null: false                    |
+| explanation | string     | null: false                    |
+| type_id     | references | null: false, foreign_key: true |
+| user_id     | references | null: false, foreign_key: true |
 
 ### Association
 
