@@ -1,0 +1,16 @@
+<h1>新規投稿</h1>
+
+<%= form_for(@type, url: users_types_path, remote: true) do |f| %>
+    <%= f.fields_for :items do |item| %>
+        <%= render 'item_fields', f: item %>
+    <% end %>
+    <div class="refresh_contentA">
+          <%= f.radio_button :gorgeous, 3, class: "radio_btn", id: 'refreshA' %>
+          <%= f.label '✔︎', for: 'refreshA' %>
+          <%= f.hidden_field :simple, :value => 0, disabled: "disabled", class: 'hiddenA' %>
+          <%= f.hidden_field :formal, :value => 0, disabled: "disabled", class: 'hiddenA' %>
+          <%= f.hidden_field :casual, :value => 3, disabled: "disabled", class: 'hiddenA' %>
+    </div>                                   
+        ... <!-- refresh_contentがA-Qの16個あります。 -->
+        <%= f.submit "保存", class:"form-control" %>
+<% end %>
